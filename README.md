@@ -26,6 +26,7 @@ android.library.reference.1=path/to/android-preferences
         android:layout_height="6dp"
         pageindicator:color="android:attr/textColor"/>
 ```
+
     Without specification the default color is the default android text color. You can
     specify the color using the attribute `pageindicator:color`. Valid values are:
         - Resources in the form "package:type/name", e.g. "android:attr/textColor"
