@@ -16,7 +16,7 @@ android.library.reference.1=path/to/android-preferences
 
  * Add the page indicator to your layout
 ```
-    <com.firebirdberlin.pageindicator.PageIndicator
+    <de.firebirdberlin.pageindicator.PageIndicator
         xmlns:pageindicator="pageindicator"
         android:id="@+id/page_indicator"
         android:background="#000000"
@@ -37,7 +37,7 @@ android.library.reference.1=path/to/android-preferences
  * Configure the page indicator in your class:
 
  ```
-import com.firebirdberlin.pageindicator.PageIndicator;
+import de.firebirdberlin.pageindicator.PageIndicator;
 
 [...]
 

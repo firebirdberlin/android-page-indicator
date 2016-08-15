@@ -1,4 +1,4 @@
-package com.firebirdberlin.pageindicator;
+package de.firebirdberlin.pageindicator;
 
 import android.content.Context;
 import android.content.res.Resources;
