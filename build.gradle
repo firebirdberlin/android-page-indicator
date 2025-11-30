@@ -16,6 +16,7 @@ allprojects {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
     namespace 'de.firebirdberlin.pageindicator'
@@ -24,5 +25,49 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 36
+    }
+
+    publishing {
+        singleVariant("release")
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = "com.github.firebirdberlin"
+                artifactId = "android-page-indicator"
+                version = "36.0.1"
+
+                pom {
+                    name = 'Android Page Indicator Library'
+                    description = 'A library for Android to indicate pages.'
+                    url = 'https://github.com/firebirdberlin/android-page-indicator'
+
+                    licenses {
+                        license {
+                            name = 'GNU General Public License v3.0'
+                            url = 'https://www.gnu.org/licenses/gpl-3.0.en.html'
+                            distribution = 'repo'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'firebirdberlin'
+                            name = 'Stefan Fruhner'
+                            email = 'stefan.fruhner@googlemail.com'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:git://github.com/firebirdberlin/android-page-indicator.git'
+                        developerConnection = 'scm:git:ssh://github.com/firebirdberlin/android-page-indicator.git'
+                        url = 'https://github.com/firebirdberlin/android-page-indicator'
+                    }
+                }
+            }
+        }
     }
 }
