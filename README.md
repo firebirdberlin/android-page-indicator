@@ -1,16 +1,70 @@
 # Android Page Indicator
 
+[![JitPack](https://jitpack.io/v/firebirdberlin/android-page-indicator.svg)](https://jitpack.io/#firebirdberlin/android-page-indicator)
+
 An Android page indicator which can be used together with a ViewPager widget.
 
+## Sponsoring
+
+If you find this library useful, you can support its development:
+
+[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor%20on%20GitHub-grey?logo=github)](https://github.com/sponsors/firebirdberlin)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/firebirdberlin)
+
 ## Installation
-Build the library with
-```
- $ ant release
-```
-In order to use it within your (ant) project add this line to the *project.properties*
-```
-android.library.reference.1=path/to/android-preferences
-```
+
+This library is distributed with [JitPack.io](https://jitpack.io).
+
+### Gradle
+
+1.  Add JitPack to your project's `settings.gradle` file:
+    ```groovy
+    dependencyResolutionManagement {
+        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+        repositories {
+            google()
+            mavenCentral()
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+    *For older Gradle versions, add it to your root `build.gradle`:*
+    ```groovy
+    allprojects {
+        repositories {
+            //...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+2.  Add the dependency to your app's `build.gradle` file. Replace `Tag` with the latest release version from the [releases page](https://github.com/firebirdberlin/android-page-indicator/releases).
+    ```groovy
+    dependencies {
+        implementation 'com.github.firebirdberlin:android-page-indicator:Tag'
+    }
+    ```
+
+### Maven
+
+1. Add the JitPack repository to your `pom.xml`:
+   ```xml
+   <repositories>
+       <repository>
+           <id>jitpack.io</id>
+           <url>https://jitpack.io</url>
+       </repository>
+   </repositories>
+   ```
+
+2. Add the dependency. Replace `Tag` with the latest release version from the [releases page](https://github.com/firebirdberlin/android-page-indicator/releases).
+   ```xml
+   <dependency>
+       <groupId>com.github.firebirdberlin</groupId>
+       <artifactId>android-page-indicator</artifactId>
+       <version>Tag</version>
+   </dependency>
+   ```
 
 ## Usage
 
@@ -52,4 +106,3 @@ pager.setOnPageChangeListener(new OnPageChangeListener() {
     }
 });
  ```
-
